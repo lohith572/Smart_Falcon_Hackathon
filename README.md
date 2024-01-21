@@ -28,16 +28,16 @@ It is built by primarily using
       iii)Golang: Go, commonly known as Golang, is a statically typed, compiled programming language designed for simplicity, efficiency, and ease of use. It was created by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson and first released in 2009
 
 ## prerequisites
-The below two lines contain the code to export the downloaded go package to the home as well as bin directories.
+**The below two lines contain the code to export the downloaded go package to the home as well as bin directories.**
 
  export GOPATH=$HOME/go
  export PATH=$PATH:$GOPATH/bin
 
- The below code is used to export the bin and config files to the current directory
+ **The below code is used to export the bin and config files to the current directory**
  export PATH=${PWD}/../bin:$PATH
  export FABRIC_CFG_PATH=$PWD/../config/
 
-To set the environment variables that allow you to operate the peer CLI as Org1:
+**To set the environment variables that allow you to operate the peer CLI as Org1:**
 
  export CORE_PEER_TLS_ENABLED=true
  export CORE_PEER_LOCALMSPID="Org1MSP"
@@ -45,7 +45,7 @@ To set the environment variables that allow you to operate the peer CLI as Org1:
  export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
  export CORE_PEER_ADDRESS=localhost:7051
 
-To set the environment variables that allow you to operate the peer CLI as Org2:
+**To set the environment variables that allow you to operate the peer CLI as Org2:**
 
  export CORE_PEER_TLS_ENABLED=true
  export CORE_PEER_LOCALMSPID="Org2MSP"
@@ -54,7 +54,7 @@ To set the environment variables that allow you to operate the peer CLI as Org2:
  export CORE_PEER_ADDRESS=localhost:9051
 
 
-import the following packages:
+**import the following packages:**
 
  "github.com/hyperledger/fabric-contract-api-go/contractapi"
  
