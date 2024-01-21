@@ -21,13 +21,13 @@ Hyperledger Fabric is a blockchain framework within the Hyperledger project that
 
 It is built by primarily using
 
-      i) **Ubuntu 20.04.6:** Ubuntu 20.04.6 LTS is a stable and long-term support release of the Ubuntu operating system, providing users with a reliable and secure foundation for their computing needs.
+      i) Ubuntu 20.04.6: Ubuntu 20.04.6 LTS is a stable and long-term support release of the Ubuntu operating system, providing users with a reliable and secure foundation for their computing needs.
 
-      ii) **Docker Desktop:** Docker Desktop is a powerful platform for developing, shipping, and running applications in containers. It simplifies the deployment and management of containerized applications, allowing developers to focus on writing code without worrying about the intricacies of the underlying infrastructure.
+      ii) Docker Desktop: Docker Desktop is a powerful platform for developing, shipping, and running applications in containers. It simplifies the deployment and management of containerized applications, allowing developers to focus on writing code without worrying about the intricacies of the underlying infrastructure.
 
-      iii) **Golang:** Go, commonly known as Golang, is a statically typed, compiled programming language designed for simplicity, efficiency, and ease of use. It was created by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson and first released in 2009
+      iii) Golang: Go, commonly known as Golang, is a statically typed, compiled programming language designed for simplicity, efficiency, and ease of use. It was created by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson and first released in 2009
 
-## prerequisites
+# prerequisites
 **The below two lines contain the code to export the downloaded go package to the home as well as bin directories.**
 
  export GOPATH=$HOME/go
@@ -77,7 +77,7 @@ It is built by primarily using
  
  "time"
 
-## Steps to execute
+# Steps to execute
 # step 1: To setup Hyperledger Fabric Test Network
 use the commands:-
 
