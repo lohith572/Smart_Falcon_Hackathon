@@ -54,28 +54,32 @@ import the following packages:
 
 ## Steps to execute
 # step 1: To setup Hyperledger Fabric Test Network
-use the below commands:-
+use the commands:-
  ./network.sh down
  ./network.sh up
 
 # step 2: Package and Deploy the chain code into fabric test network 
-use the below command:-
+use the command:-
  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
 
 # step 3: Develop Hyperledger Fabric Chaincode
-use the below command:-
+use the command:-
  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"InitLedger","Args":[]}'
 
  # step 4: Test the chain code functionality using Fabric Peer CLI commands
- # 4.1: To create Asset: use the below command
+ # 4.1: To create Asset: 
+ use the command:-
    peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"CreateAsset","Args":["Asset5","5","14","5555","150000.6","active","0.0","","initial deposit"]}'
 
-# 4.2: To update asset: use the below command
+# 4.2: To update asset:
+use the command:-
   peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"UpateAsset","Args":["Asset5","5","14","1238","250000.6","active","0.0","IMPS","initial deposit"]}'
 
-# 4.3: To read asset: use the below command
+# 4.3: To read asset: 
+use the command:-
   peer chaincode query -C mychannel -n basic -c '{"Args":["ReadAsset","Asset1"]}'
 
-# 4.4: To get Asset Transaction History: use the below command
+# 4.4: To get Asset Transaction History: 
+use the command:-
   peer chaincode query -C mychannel -n basic -c '{"Args":["GetAssetHistory","Asset4"]}'
    
