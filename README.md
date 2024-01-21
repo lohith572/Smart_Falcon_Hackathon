@@ -19,7 +19,7 @@ Hyperledger Fabric is a blockchain framework within the Hyperledger project that
 
 7.Pluggable Consensus Mechanisms
 
-It is built by primarily using
+**It is built by primarily using**
 
       i) Ubuntu 20.04.6: Ubuntu 20.04.6 LTS is a stable and long-term support release of the Ubuntu operating system, providing users with a reliable and secure foundation for their computing needs.
 
