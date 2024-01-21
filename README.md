@@ -68,6 +68,7 @@ import the following packages:
 ## Steps to execute
 # step 1: To setup Hyperledger Fabric Test Network
 use the commands:-
+
  ./network.sh down
  
  ./network.sh up
